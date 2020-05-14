@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: myGitHub
-      path: myself/MySourceRepo     # Replace with your Git repo  
+      path: https://github.com/jagdishmirani/docker-build-emample.git
     branches:
         include: master
  
