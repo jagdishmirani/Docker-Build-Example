@@ -10,7 +10,7 @@ resources:
   - name: build_info_1_docker_build_push
     type: BuildInfo
     configuration:
-      sourceArtifactory: myArtifactory
+      sourceArtifactory: ArtifactoryIntegration
       buildName: svc_build
       buildNumber: 1
       
@@ -28,7 +28,7 @@ pipelines:
           inputResources:
             - name: myDockerRepo
           integrations:
-            - name: myArtifactory
+            - name: ArtifactoryIntegration
  
       - name: docker_push
         type: DockerPush
@@ -36,7 +36,7 @@ pipelines:
           affinityGroup: dockerGroup
           targetRepository: docker-local
           integrations:
-            - name: myArtifactory
+            - name: ArtifactoryIntegration
           inputSteps:
             - name: docker_build
  
