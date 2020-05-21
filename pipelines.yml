@@ -2,8 +2,10 @@ resources:
   - name: myDockerRepo
     type: GitRepo
     configuration:
-      gitProvider: myGitHub
-      path: jagdishmirani/docker-build-example 
+      gitProvider: my_github
+      path: jagdishmirani/docker-build-example
+    branches:
+      include: master
  
   - name: build_info_1_docker_build_push
     type: BuildInfo
